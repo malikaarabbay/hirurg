@@ -78,6 +78,11 @@
     min-height: 1px;
     /* overflow: hidden; */
     outline: none;
+    text-align: center;
+}
+.sertificat_js.slick-initialized.slick-slider {
+    width: 90%;
+    margin: 30px auto;
 }
 [dir='rtl'] .slick-slide
 {
