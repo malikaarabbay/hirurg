@@ -48,6 +48,14 @@ use yii\helpers\Url;
                 <li>
                     <a href="<?= Url::toRoute(['/']) ?>">Главная  </a>
                 </li>
+                <li class="sub_menu_link"><a>  Болезни вен</a>
+                    <ul class="sub_menu">
+                        <li><a href="">Варикозное расширение вен</a></li>  
+                        <li><a href="">Тромбозы глубоких вен</a></li>
+                        <li><a href="">Тромбофлебит</a></li>
+                        <li><a href="">Хроническая венозная недостаточность</a></li>
+                    </ul>
+                </li>
                 <li class="sub_menu_link"><a >Болезни артерий </a>
                     <?php $articles = \common\models\Article::find()->where(['is_published' => '1', 'category_id' => '2'])->orderBy('created DESC')->all()?>
                     <ul class="sub_menu">
@@ -56,8 +64,13 @@ use yii\helpers\Url;
                         <?php } ?>
                     </ul>
                 </li>
-                <li><a href="<?= Url::toRoute(['/article/bolezni-ven']) ?>">  Болезни вен</a></li>
-                <li><a href="<?= Url::toRoute(['/article/troficheskiye-yazvy']) ?>"> Трофические язвы </a></li>
+                
+                <li class="sub_menu_link"><a > Трофические язвы </a>
+                     <ul class="sub_menu">
+                        <li><a href="">Венозные язвы</a></li>  
+                        <li><a href="">Артериальные язвы</a></li>
+                    </ul>
+                </li>
                 <li><a href="<?= Url::toRoute(['/article/diagnoztika']) ?>">Диагностика</a></li>
                 <li><a href="<?= Url::toRoute(['/article/seny']) ?>">Цены  </a></li>
                 <li><a href="<?= Url::toRoute(['/article/o-klinike']) ?>">О клинике</a></li>

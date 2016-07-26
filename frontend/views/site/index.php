@@ -46,14 +46,14 @@ use yii\helpers\Url;
         <div class="preimushestvo_list">
             <div class="preimushestvo_item">
                 <div class="pre_item_icon">
-                    9
+                    16
                 </div>
                 лет успешной<br>
                 работы
             </div>
             <div class="preimushestvo_item">
                 <div class="pre_item_icon">
-                    14
+                    3
                 </div>
                 квалифицированных<br>
                 хирургов, ортопедов,<br>
@@ -61,14 +61,14 @@ use yii\helpers\Url;
             </div>
             <div class="preimushestvo_item">
                 <div class="pre_item_icon">
-                    15
+                    16
                 </div>
                 лет стаж работы<br>
                 каждого специалиста
             </div>
             <div class="preimushestvo_item">
                 <div class="pre_item_icon">
-                    50
+                    10
                 </div>
                 видов услуг<br>
                 по восстановлению<br>
@@ -99,7 +99,55 @@ use yii\helpers\Url;
 <div class="cr">
     <div class="stroenie">
         <div class="chelovek_img">
-            <img src="img/chel.png" alt="">
+            <div class="chel_img_pos"><img src="img/chel.png" alt="">
+
+                <a href="" class="chel_items suzhenie_sonnix_arterii" date-title="Сужение сонных артерии">
+                    <div class="chel_item">
+                    </div>
+                </a>
+                <a href="" class="chel_items trombi" date-title="Тромбы (онемение, похолдание)">
+                    <div class="chel_item "></div>
+                </a>
+                <a href="" class="chel_items troficheskie_iazvi" date-title="Трофические язвы">
+                    <div class="chel_item ">
+                    </div>
+                </a>
+                <a href="" class="chel_items bol_v_oblasti_zhivota" date-title="Боль в области живота">
+                    <div class="chel_item ">
+                    </div>
+                </a>
+                <a href="" class="chel_items right trombi_right" date-title="Тромбы (онемение, похолдание)">
+                    <div class="chel_item "></div>
+                </a>
+                <a href="" class="chel_items right troficheskie_iazvi_right" date-title="Трофические язвы">
+                    <div class="chel_item ">
+                    </div>
+                </a>
+                <a href="" class="chel_items bol_onimenie_nizhnix_konechnosti " date-title="Боль, онемение нижних конечностей">
+                    <div class="chel_item ">
+                    </div>
+                </a>
+                 <a href="" class="chel_items bol_onimenie_nizhnix_konechnosti_right " date-title="Боль, онемение нижних конечностей">
+                    <div class="chel_item ">
+                    </div>
+                </a>
+                <a href="" class="chel_items varikoz_tromboz_ven " date-title="Варикоз, тромбоз вен">
+                    <div class="chel_item ">
+                    </div>
+                </a>
+                <a href="" class="chel_items varikoz_tromboz_ven_right " date-title="Варикоз, тромбоз вен">
+                    <div class="chel_item ">
+                    </div>
+                </a>
+                <a href="" class="chel_items troficheskie_iazvi_nog " date-title="Трофические язвы">
+                    <div class="chel_item ">
+                    </div>
+                </a>
+                <a href="" class="chel_items troficheskie_iazvi_nog_right " date-title="Трофические язвы">
+                    <div class="chel_item ">
+                    </div>
+                </a>
+            </div>
         </div>
         <div class="text_chel">
             <div class="title_text_chel">
@@ -109,7 +157,15 @@ use yii\helpers\Url;
             <ul class="storenie_list">
                 <li>
                     <div class="stroenie_title">
-                        <strong>Примерный текст</strong>
+                        <strong>Болезни вен</strong>
+                        <div class="sub_title_container">
+                            <ul class="sub_title">
+                              <li><a href="">Варикозное расширение вен</a></li>  
+                              <li><a href="">Тромбозы глубоких вен</a></li>
+                              <li><a href="">Тромбофлебит</a></li>
+                              <li><a href="">Хроническая венозная недостаточность</a></li>
+                            </ul>
+                        </div>
                     </div>
                     <p>Contrary to popular belief, Lorem Ipsum is not simply random text.
                         It has roots in a piece of classical Latin literature from 45 BC,
@@ -117,7 +173,13 @@ use yii\helpers\Url;
                 </li>
                 <li>
                     <div class="stroenie_title">
-                        <strong>Примерный текст</strong>
+                        <strong>Болезни артерий</strong>
+                        <div class="sub_title_container">
+                            <ul class="sub_title">
+                              <li><a href="">Атеросклероз</a></li>  
+                              <li><a href="">Эндоартериат</a></li>
+                            </ul>
+                        </div>
                     </div>
                     <p>Contrary to popular belief, Lorem Ipsum is not simply random text.
                         It has roots in a piece of classical Latin literature from 45 BC,
@@ -125,15 +187,13 @@ use yii\helpers\Url;
                 </li>
                 <li>
                     <div class="stroenie_title">
-                        <strong>Примерный текст</strong>
-                    </div>
-                    <p>Contrary to popular belief, Lorem Ipsum is not simply random text.
-                        It has roots in a piece of classical Latin literature from 45 BC,
-                        making it over 2000 years old.</p>
-                </li>
-                <li>
-                    <div class="stroenie_title">
-                        <strong>Примерный текст</strong>
+                        <strong>Трофические язвы</strong>
+                        <div class="sub_title_container">
+                            <ul class="sub_title">
+                              <li><a href="">Венозные язвы</a></li>  
+                              <li><a href="">Артериальные язвы</a></li>
+                            </ul>
+                        </div>
                     </div>
                     <p>Contrary to popular belief, Lorem Ipsum is not simply random text.
                         It has roots in a piece of classical Latin literature from 45 BC,
@@ -188,4 +248,59 @@ use yii\helpers\Url;
         </a>
     </div>
 </div>
-
+<div class="cr">
+    <div class="title">
+        <h2>Сертификаты</h2>
+    </div>
+    <div class="sertificat_js">
+                        <div class="sertificat_list-item">
+                            <div class="sertificat_list">
+                                <div class="sertificat_list">
+                                    <a href="img/sertificat.jpg"class="fancybox"><img src="img/sertificat.jpg" alt="" ></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sertificat_list-item">
+                            <div class="sertificat_list">
+                                <div class="sertificat_list">
+                                    <a href="img/sertificat.jpg"class="fancybox"><img src="img/sertificat.jpg" alt="" ></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sertificat_list-item">
+                            <div class="sertificat_list">
+                                <div class="sertificat_list">
+                                    <a href="img/sertificat.jpg"class="fancybox"><img src="img/sertificat.jpg" alt="" ></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sertificat_list-item">
+                            <div class="sertificat_list">
+                                <div class="sertificat_list">
+                                    <a href="img/sertificat.jpg"class="fancybox"><img src="img/sertificat.jpg" alt="" ></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sertificat_list-item">
+                            <div class="sertificat_list">
+                                <div class="sertificat_list">
+                                    <a href="img/sertificat.jpg"class="fancybox"><img src="img/sertificat.jpg" alt="" ></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sertificat_list-item">
+                            <div class="sertificat_list">
+                                <div class="sertificat_list">
+                                    <a href="img/sertificat.jpg"class="fancybox"><img src="img/sertificat.jpg" alt="" ></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sertificat_list-item">
+                            <div class="sertificat_list">
+                                <div class="sertificat_list">
+                                    <a href="img/sertificat.jpg"class="fancybox"><img src="img/sertificat.jpg" alt="" ></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+</div>
