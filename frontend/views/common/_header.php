@@ -49,26 +49,28 @@ use yii\helpers\Url;
                     <a href="<?= Url::toRoute(['/']) ?>">Главная  </a>
                 </li>
                 <li class="sub_menu_link"><a>  Болезни вен</a>
+                    <?php $firstArticles = \common\models\Article::find()->where(['is_published' => '1', 'category_id' => '3'])->orderBy('created DESC')->all()?>
                     <ul class="sub_menu">
-                        <li><a href="">Варикозное расширение вен</a></li>  
-                        <li><a href="">Тромбозы глубоких вен</a></li>
-                        <li><a href="">Тромбофлебит</a></li>
-                        <li><a href="">Хроническая венозная недостаточность</a></li>
+                        <?php foreach($firstArticles as $firstArticle){?>
+                            <li><a href="<?= Url::toRoute(['/article/view', 'slug' => $firstArticle->slug]) ?>"><?=$firstArticle->title?></a></li>
+                        <?php } ?>
                     </ul>
                 </li>
                 <li class="sub_menu_link"><a >Болезни артерий </a>
-                    <?php $articles = \common\models\Article::find()->where(['is_published' => '1', 'category_id' => '2'])->orderBy('created DESC')->all()?>
+                    <?php $secondArticles = \common\models\Article::find()->where(['is_published' => '1', 'category_id' => '2'])->orderBy('created DESC')->all()?>
                     <ul class="sub_menu">
-                        <?php foreach($articles as $article){?>
-                        <li><a href="<?= Url::toRoute(['/article/view', 'slug' => $article->slug]) ?>"><?=$article->title?></a></li>
+                        <?php foreach($secondArticles as $secondArticle){?>
+                        <li><a href="<?= Url::toRoute(['/article/view', 'slug' => $secondArticle->slug]) ?>"><?=$secondArticle->title?></a></li>
                         <?php } ?>
                     </ul>
                 </li>
                 
                 <li class="sub_menu_link"><a > Трофические язвы </a>
-                     <ul class="sub_menu">
-                        <li><a href="">Венозные язвы</a></li>  
-                        <li><a href="">Артериальные язвы</a></li>
+                    <?php $thirdArticles = \common\models\Article::find()->where(['is_published' => '1', 'category_id' => '4'])->orderBy('created DESC')->all()?>
+                    <ul class="sub_menu">
+                        <?php foreach($thirdArticles as $thirdArticle){?>
+                            <li><a href="<?= Url::toRoute(['/article/view', 'slug' => $thirdArticle->slug]) ?>"><?=$thirdArticle->title?></a></li>
+                        <?php } ?>
                     </ul>
                 </li>
                 <li><a href="<?= Url::toRoute(['/article/diagnoztika']) ?>">Диагностика</a></li>

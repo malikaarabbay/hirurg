@@ -31,7 +31,7 @@
                     ['label' => 'Статьи', 'icon' => 'fa fa-pencil', 'url' => ['article/index'],],
                     ['label' => 'Комментарии', 'icon' => 'fa fa-comments-o', 'url' => ['comment/index'],],
 //                    ['label' => 'Галерея', 'icon' => 'fa fa-file-photo-o', 'url' => ['gallery/index'],],
-//                    ['label' => 'Слайдер', 'icon' => 'fa fa-image', 'url' => ['slider/index'],],
+                    ['label' => 'Ваннер', 'icon' => 'fa fa-image', 'url' => ['banner/index'],],
 //                    ['label' => 'Обратная связь', 'icon' => 'fa fa-envelope', 'url' => ['feedback/index'],],
 //                    ['label' => 'Тексты', 'icon' => 'fa fa-file-text-o', 'url' => ['text/index'],],
 //                    ['label' => 'Отзыви', 'icon' => 'fa  fa-comments-o', 'url' => ['review/index'],],

@@ -28,7 +28,7 @@ $this->registerMetaTag(['name'=> 'description', 'content' => $model->meta_descri
                 ]) ?>
         </div>
         <div class="content">
-            <?php if($model->category_id == 2) {?>
+            <?php if($model->category_id !== 1) {?>
             <div class="content_item first_item">
                 <?=
                 EasyThumbnailImage::thumbnailImg(

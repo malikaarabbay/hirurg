@@ -40,9 +40,10 @@ $this->registerMetaTag(['name'=> 'description', 'content' => $model->meta_descri
         </div>
         <aside class="side_bar">
             <?php foreach($doctors as $doctor){?>
-                <a href="<?= Url::toRoute(['/doctor/view', 'slug' => $doctor->slug])?>">
-                    <div class="side_bar_item">
-                        <div class="side_bar_img">
+
+                <div class="side_bar_item">
+                    <div class="side_bar_img">
+                        <a href="<?= Url::toRoute(['/doctor/view', 'slug' => $doctor->slug])?>">
                             <?=
                             EasyThumbnailImage::thumbnailImg(
                                 $doctor->imagePath,
@@ -55,13 +56,14 @@ $this->registerMetaTag(['name'=> 'description', 'content' => $model->meta_descri
                                 ]
                             );
                             ?>
-                        </div>
-                        <div class="name_doc">
-                            <?= $doctor->title ?>
-                        </div>
-                        <?= $doctor->description ?>
+                        </a>
                     </div>
-                </a>
+                    <div class="name_doc">
+                        <a href="<?= Url::toRoute(['/doctor/view', 'slug' => $doctor->slug])?>"> <?= $doctor->title ?> </a>
+                    </div>
+                    <?= $doctor->description ?>
+                </div>
+
             <?php } ?>
         </aside>
     </div>

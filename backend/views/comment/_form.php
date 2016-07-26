@@ -16,7 +16,7 @@ use yii\helpers\ArrayHelper;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'article_id')->dropDownList(ArrayHelper::map(\common\models\Article::find()->where(['category_id' => '2'])->all(), 'id', 'title'),  ['prompt' => 'Без статьи'])->label('Статья') ?>
+    <?= $form->field($model, 'article_id')->dropDownList(ArrayHelper::map(\common\models\Article::find()->where(['NOT IN', 'category_id', [1]])->all(), 'id', 'title'),  ['prompt' => 'Без статьи'])->label('Статья') ?>
 
     <?= $form->field($model, 'firstname')->textInput(['maxlength' => true]) ?>
     
