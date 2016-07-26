@@ -24,9 +24,6 @@ use yii\helpers\ArrayHelper;
             <li class="<?= ($image_tab) ? '' : 'active'?>">
                 <a href="#tab_1" data-toggle="tab">Данные</a>
             </li>
-            <li class="<?= ($image_tab) ? 'active' : ''?>">
-                <a href="#tab_2" data-toggle="tab">Изображении</a>
-            </li>
             <li class="pull-right">
                 <?= Html::submitButton($model->isNewRecord ?
                         '<span class="glyphicon glyphicon-ok"></span> '.Yii::t('app', 'Create') :
@@ -44,12 +41,12 @@ use yii\helpers\ArrayHelper;
 
                         <?= $form->field($model, 'category_id')->dropDownList(ArrayHelper::map(Category::find()->where(['model_name' => 'article'])->all(), 'id', 'title'),  ['prompt' => '- Без категории -']) ?>
 
-                        <?= $form->field($model, 'anounce')->textarea(['rows' => 4]) ?>
+                        <?= $form->field($model, 'anounce')->textarea(['rows' => 6]) ?>
 
                         <?= $form->field($model, 'description')->widget(Widget::className(), [
                             'settings' => [
                                 'lang' => 'ru',
-                                'minHeight' => 150,
+                                'minHeight' => 300,
                                 'imageUpload' => Url::to(['/site/image-upload']),
                                 'imageManagerJson' => Url::to(['/site/images-get']),
                                 'plugins' => [
@@ -58,8 +55,20 @@ use yii\helpers\ArrayHelper;
                             ]
                         ]); ?>
 
-                        <?= $form->field($model, 'sort_index')->input('number', ['min' => '0']) ?>
+                        <?= $form->field($model, 'video')->textInput(['maxlength' => 255]) ?>
 
+                        <?= $form->field($model, 'video_desc')->widget(Widget::className(), [
+                            'settings' => [
+                                'lang' => 'ru',
+                                'minHeight' => 300,
+                                'imageUpload' => Url::to(['/site/image-upload']),
+                                'imageManagerJson' => Url::to(['/site/images-get']),
+                                'plugins' => [
+                                    'imagemanager'
+                                ]
+                            ]
+                        ]); ?>
+                        
                         <?= $form->field($model, 'is_published')->checkbox() ?>
 
                     </div>
@@ -79,6 +88,8 @@ use yii\helpers\ArrayHelper;
                                 ],
                             ])
                         ?>
+
+                        <?= $form->field($model, 'meta_title')->textInput(['maxlength' => 255]) ?>
 
                         <?= $form->field($model, 'meta_keywords')->textarea(['rows' => 4]) ?>
 

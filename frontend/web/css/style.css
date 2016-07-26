@@ -581,7 +581,7 @@ h2 {
     line-height: 16px;
     margin: 27px 0 18px;
 }
-.breadcrumbs {
+.breadcrumb {
     position: absolute;
    list-style: none;
     margin: 0;
@@ -591,26 +591,26 @@ h2 {
     font-size: 12px;
     top: 0;
 }
-.breadcrumbs li {
+.breadcrumb li {
     margin-left: 10px;
     /* padding-left: 10px; */
     color: #00aeef;
 }
-.breadcrumbs li:after {
+.breadcrumb li:after {
     content: '>';
     color: #818181;
     display: block;
     float: right;
     margin-left: 8px;
 }
-.breadcrumbs li a{
+.breadcrumb li a{
     color: #818181;
     text-decoration: none;
 }
-.breadcrumbs li a:hover{
+.breadcrumb li a:hover{
     color:#00aeef;
 }
-.breadcrumbs li:last-child:after {
+.breadcrumb li:last-child:after {
     display: none;
 }
 .content {
@@ -706,6 +706,7 @@ h2 {
     font-size: 16px;
     color: #00aeef;
     margin-bottom: 5px;
+<<<<<<< HEAD
 }
 /*человек*/
 .chel_img_pos {
@@ -914,4 +915,6 @@ menu
 }
 .storenie_list .sub_title li:hover a{
     color:#00aeef;
+=======
+>>>>>>> 9ee575c4c5db3821a5bc15a23888194b6b8180a7
 }

@@ -165,6 +165,14 @@ return array(
     'Reviews' => 'Отзыви',
     'Update Review' => 'Редактировать отзыв',
 
+	'Video' => 'Видео (id youtybe)',
+	'Video Desc' => 'Видео описание',
+
+	'Comments' => 'Комменты',
+	'Doctors' => 'Доктора',
+	'Create Doctor' => 'Добавить Доктора',
+	'Create Comment' => 'Добавить коммент'
+
 );
 
 

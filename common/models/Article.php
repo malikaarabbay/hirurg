@@ -39,10 +39,10 @@ class Article extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['anounce', 'description', 'meta_keywords', 'meta_description'], 'string'],
+            [['anounce', 'description', 'meta_keywords', 'meta_description', 'video_desc'], 'string'],
             [['category_id','created', 'updated', 'is_published', 'created_user_id', 'updated_user_id', 'sort_index'], 'integer'],
-            [['title', 'photo', 'slug'], 'string', 'max' => 255],
-            [['title', 'description'], 'required'],
+            [['title', 'photo', 'slug', 'video'], 'string', 'max' => 255],
+            [['title'], 'required'],
             [['file'], 'file', 'maxFiles' => 10]
         ];
     }
@@ -61,11 +61,14 @@ class Article extends \yii\db\ActiveRecord
             'updated' => Yii::t('app', 'Updated'),
             'sort_index' => Yii::t('app', 'Sort Index'),
             'is_published' => Yii::t('app', 'Is Published'),
+            'meta_title' => Yii::t('app', 'Meta Title'),
             'meta_keywords' => Yii::t('app', 'Meta Keywords'),
             'meta_description' => Yii::t('app', 'Meta Description'),
             'slug' => Yii::t('app', 'Slug'),
             'created_user_id' => Yii::t('app', 'Created User Id'),
             'updated_user_id' => Yii::t('app', 'Updated User Id'),
+            'video' => Yii::t('app', 'Video'),
+            'video_desc' => Yii::t('app', 'Video Desc'),
         ];
     }
 
@@ -86,6 +89,10 @@ class Article extends \yii\db\ActiveRecord
         return '@frontend/web/images/'.$image;
     }
 
+    public function getComment()
+    {
+        return $this->hasOne(Comment::className(), ['article_id' => 'id']);
+    }
 
     public function saveImages(){
 

@@ -9,7 +9,7 @@ use common\models\Doctor;
 use yii\data\ActiveDataProvider;
 use yii\web\NotFoundHttpException;
 
-class ArticleController extends \yii\web\Controller
+class DoctorController extends \yii\web\Controller
 {
 //    public function actionIndex()
 //    {
@@ -54,42 +54,30 @@ class ArticleController extends \yii\web\Controller
 
     public function actionView($slug){
 
-        $model = $this->findArticle($slug);
-
-        $comments = Comment::find()->where(['is_published' => 1, 'article_id' => $model->id])->all();
-
+        $model = $this->findDoctor($slug);
         $doctors = Doctor::find()->where(['is_published' => 1])->all();
-
         return $this->render('view', [
             'model' => $model,
-            'comments' => $comments,
             'doctors' => $doctors,
         ]);
     }
 
     protected function findModel($id)
     {
-        if (($model = Article::findOne($id)) !== null) {
+        if (($model = Doctor::findOne($id)) !== null) {
             return $model;
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');
         }
     }
 
-    protected function findArticle($slug)
+    protected function findDoctor($slug)
     {
-        if (($model = Article::find()->where(['slug' => $slug])->one()) !== null) {
+        if (($model = Doctor::find()->where(['slug' => $slug])->one()) !== null) {
             return $model;
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');
         }
     }
 
-    protected function findCategory($slug)
-    {
-        if (($model = Category::find()->where(['slug' => $slug])->one()) !== null) {
-            return $model;
-        } else {
-            throw new NotFoundHttpException('The requested page does not exist.');
-        }
-    }}
+}
