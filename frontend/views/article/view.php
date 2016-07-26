@@ -43,7 +43,7 @@ $this->registerMetaTag(['name'=> 'description', 'content' => $model->meta_descri
                 );
                 ?>
                 <p><?= $model->anounce ?></p>
-                <a href="" class="button_bg">Записаться на прием</a>
+                <a href="#pozvonim" class="button_bg">Записаться на прием</a>
             </div>
             <?php if($model->description) {?>
             <div class="content_item">

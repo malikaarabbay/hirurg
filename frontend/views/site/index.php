@@ -240,7 +240,7 @@ $this->registerMetaTag(['name'=> 'description', 'content' => '']);
                 Вы здоровы!
             </li>
         </ul>
-        <a href="" class="button">
+        <a href="#pozvonim" class="button">
             Связаться с нами
         </a>
     </div>
