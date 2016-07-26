@@ -4,6 +4,9 @@ $this->title = 'Хирург';
 use yii\helpers\Html;
 use yii\helpers\Url;
 
+$this->registerMetaTag(['name'=> 'title', 'content' => '']);
+$this->registerMetaTag(['name'=> 'keywords', 'content' => '']);
+$this->registerMetaTag(['name'=> 'description', 'content' => '']);
 ?>
 
 <div class = 'iosSlider'>
