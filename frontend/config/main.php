@@ -54,6 +54,7 @@ return [
                 '<controller:(article)>/<slug>' => '<controller>/view',
                 '<controller:(article)>/index/<slug>' => '<controller>/index',
                 '<controller:(article)>/category/<slug>' => '<controller>/category',
+                '<controller:(doctor)>/<slug>' => '<controller>/view',
             ],
         ],
         'authClientCollection' => [

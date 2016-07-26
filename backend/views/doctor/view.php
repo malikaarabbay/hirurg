@@ -4,14 +4,15 @@ use yii\helpers\Html;
 use yii\widgets\DetailView;
 
 /* @var $this yii\web\View */
-/* @var $model common\models\Comment */
+/* @var $model common\models\Doctor */
 
-$this->title = $model->id;
-$this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'Comments'), 'url' => ['index']];
+$this->title = $model->title;
+$this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'Doctors'), 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="comment-view">
-    
+<div class="doctor-view">
+
+
     <p>
         <?= Html::a(Yii::t('app', 'Update'), ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
         <?= Html::a(Yii::t('app', 'Delete'), ['delete', 'id' => $model->id], [
@@ -27,13 +28,18 @@ $this->params['breadcrumbs'][] = $this->title;
         'model' => $model,
         'attributes' => [
             'id',
-            'article_id',
-            'firstname',
-            'secondname',
-            'comment:ntext',
+            'title',
+            'description:ntext',
+            'photo',
+            'is_published',
             'created',
             'updated',
-            'is_published',
+            'created_user_id',
+            'updated_user_id',
+            'slug',
+            'meta_title',
+            'meta_keywords',
+            'meta_description',
         ],
     ]) ?>
 

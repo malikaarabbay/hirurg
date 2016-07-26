@@ -54,4 +54,10 @@ class Comment extends \yii\db\ActiveRecord
             'is_published' => Yii::t('app', 'Is Published'),
         ];
     }
+
+    public function getArticle()
+    {
+        return $this->hasOne(Article::className(), ['id' => 'article_id']);
+    }
+    
 }

@@ -14,7 +14,6 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <p>
         <?= Html::a('<span class="glyphicon glyphicon-plus"></span> '.Yii::t('app', 'Create Article'), ['create'], ['class' => 'btn btn-success']) ?>
-        <?= Html::a('<span class="glyphicon glyphicon-th-list"></span> '.Yii::t('app', 'Categories'), ['category/index', 'model_name' => 'article'], ['class' => 'btn btn-primary']) ?>
     </p>
 
     <?= GridView::widget([

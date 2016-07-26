@@ -26,9 +26,10 @@
 //                        ],
 //                    ],
 
-                    ['label' => 'Пользователи', 'icon' => 'fa fa-users', 'url' => ['user/index'],],
-//                    ['label' => 'Новости', 'icon' => 'fa fa-bullhorn', 'url' => ['news/index'],],
+//                    ['label' => 'Пользователи', 'icon' => 'fa fa-users', 'url' => ['user/index'],],
+                    ['label' => 'Доктора', 'icon' => 'fa fa-user-md', 'url' => ['doctor/index'],],
                     ['label' => 'Статьи', 'icon' => 'fa fa-pencil', 'url' => ['article/index'],],
+                    ['label' => 'Комментарии', 'icon' => 'fa fa-comments-o', 'url' => ['comment/index'],],
 //                    ['label' => 'Галерея', 'icon' => 'fa fa-file-photo-o', 'url' => ['gallery/index'],],
 //                    ['label' => 'Слайдер', 'icon' => 'fa fa-image', 'url' => ['slider/index'],],
 //                    ['label' => 'Обратная связь', 'icon' => 'fa fa-envelope', 'url' => ['feedback/index'],],
