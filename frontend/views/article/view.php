@@ -74,7 +74,9 @@ $this->registerMetaTag(['name'=> 'description', 'content' => $model->meta_descri
                         Поделиться в социальных сетях
                     </h2>
                 </div>
-
+                    <script type="text/javascript" src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js" charset="utf-8"></script>
+                <script type="text/javascript" src="//yastatic.net/share2/share.js" charset="utf-8"></script>
+                <div class="ya-share2" data-services="vkontakte,facebook,odnoklassniki,moimir,gplus,twitter" data-counter=""></div>
             </div>
             <?php if($comments) {?>
             <div class="content_item">

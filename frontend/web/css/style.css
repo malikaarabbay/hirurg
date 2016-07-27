@@ -745,9 +745,23 @@ h2 {
     display: inline-block;
     float: left;
     margin-right: 15px;
+    height: 150px;
+    display: flex;
+    justify-content: initial;
+    align-items: center;
+    text-align: center;
 }
 .side_bar_img img {
-    width:100%;
+    width: 80%;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+}
+.side_bar_img img:HOVER {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    width: 100%;
 }
 .name_doc {
     font-weight: bold;
@@ -996,7 +1010,7 @@ menu
 .price_content {
     width: 94%;
     display: none;
-    padding: 10px;
+    padding: 10px ;
     margin: 0 auto;
 }
 .price_content table {
@@ -1164,7 +1178,17 @@ background-size: cover;
 .logo span,.chelovek_img {
     display: none;
 }
-
+.price_content {
+    width: 100%;
+    display: none;
+    padding: 0px 0 5px;
+}
+.price_content table tr td {
+    line-height: 20px;
+}
+.price_content table tr td:last-child {
+    border:none;
+}
 .top_container_item.addres,.breadcrumb {
     display: none;
 }
@@ -1239,7 +1263,14 @@ background-size: cover;
     margin-bottom: 10px;
     white-space: normal;
 }
-
+.price_content table tr td {
+    padding: 10px 0;
+    line-height: 18px;
+    width: 100%;
+}
+.price_content table tr {
+    width: 100%;
+}
 .top_container_item.mail,.soc_seti {
     display: none;
 }

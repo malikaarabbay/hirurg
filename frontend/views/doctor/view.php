@@ -35,8 +35,9 @@ $this->registerMetaTag(['name'=> 'description', 'content' => $model->meta_descri
                     ]
                 );
                 ?>
+                 <?= $model->description ?>
             </div>
-            <?= $model->description ?>
+           
         </div>
         <aside class="side_bar">
             <?php foreach($doctors as $doctor){?>
