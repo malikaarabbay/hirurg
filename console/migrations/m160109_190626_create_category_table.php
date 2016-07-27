@@ -42,7 +42,9 @@ class m160109_190626_create_category_table extends Migration
             ['parent_id', 'model_name', 'title', 'description', 'created', 'updated', 'slug','is_published'],
             [
                 [0, 'article', 'О компании', 'Описание контента', time(), time(), 'category-1', 1],
-                [0, 'article', 'Услуги', 'Описание контента', time(), time(), 'category-2', 1],
+                [0, 'article', 'Болезни артерий', 'Описание контента', time(), time(), 'category-2', 1],
+                [0, 'article', 'Болезни вен', 'Описание контента', time(), time(), 'category-3', 1],
+                [0, 'article', 'Трофические язвы', 'Описание контента', time(), time(), 'category-4', 1],
             ]
         );
     }

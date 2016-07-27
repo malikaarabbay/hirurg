@@ -2,7 +2,7 @@
 namespace frontend\controllers;
 
 use common\models\Feedback;
-use common\models\Product;
+use common\models\Banner;
 use common\models\Subscribe;
 use common\models\User;
 use Yii;
@@ -79,7 +79,11 @@ class SiteController extends Controller
 
     public function actionIndex()
     {
-        return $this->render('index');
+        $certificates = Banner::find()->where(['is_published' => '1'])->all();
+
+        return $this->render('index', [
+            'certificates' => $certificates
+        ]);
     }
 
     public function actionLogin()

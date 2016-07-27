@@ -11,6 +11,7 @@ if($model->category_id == 2) {
     $this->params['breadcrumbs'][] = $model->title;
 }
 
+$this->registerMetaTag(['name'=> 'title', 'content' =>  $model->meta_title]);
 $this->registerMetaTag(['name'=> 'keywords', 'content' =>  $model->meta_keywords]);
 $this->registerMetaTag(['name'=> 'description', 'content' => $model->meta_description]);
 
@@ -27,7 +28,7 @@ $this->registerMetaTag(['name'=> 'description', 'content' => $model->meta_descri
                 ]) ?>
         </div>
         <div class="content">
-            <?php if($model->category_id == 2) {?>
+            <?php if($model->category_id !== 1) {?>
             <div class="content_item first_item">
                 <?=
                 EasyThumbnailImage::thumbnailImg(
@@ -42,7 +43,7 @@ $this->registerMetaTag(['name'=> 'description', 'content' => $model->meta_descri
                 );
                 ?>
                 <p><?= $model->anounce ?></p>
-                <a href="" class="button_bg">Записаться на прием</a>
+                <a href="#pozvonim" class="button_bg">Записаться на прием</a>
             </div>
             <?php if($model->description) {?>
             <div class="content_item">

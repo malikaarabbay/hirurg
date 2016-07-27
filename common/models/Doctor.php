@@ -3,6 +3,13 @@
 namespace common\models;
 
 use Yii;
+use yii\behaviors\BlameableBehavior;
+use Yii\db\ActiveRecord;
+use vova07\fileapi\behaviors\UploadBehavior;
+use yii\behaviors\SluggableBehavior;
+use yii\web\UploadedFile;
+use himiklab\sortablegrid\SortableGridBehavior;
+
 
 /**
  * This is the model class for table "{{%doctor}}".
@@ -76,5 +83,39 @@ class Doctor extends \yii\db\ActiveRecord
             'meta_keywords' => Yii::t('app', 'Meta Keywords'),
             'meta_description' => Yii::t('app', 'Meta Description'),
         ];
+    }
+
+    public function behaviors()
+    {
+        return [
+            'timestamp' => [
+                'class' => 'yii\behaviors\TimestampBehavior',
+                'attributes' => [
+                    ActiveRecord::EVENT_BEFORE_INSERT => ['created', 'updated'],
+                    ActiveRecord::EVENT_BEFORE_UPDATE => ['updated'],
+                ],
+            ],
+            'uploadBehavior' => [
+                'class' => UploadBehavior::className(),
+                'attributes' => [
+                    'photo' => [
+                        'path' => '@frontend/web/images',
+                        'tempPath' => '@frontend/web/images',
+                        'url' => Yii::getAlias('@frontendWebroot/images')
+                    ],
+                ]
+            ],
+            [
+                'class' => SluggableBehavior::className(),
+                'attribute' => 'title',
+                'slugAttribute' => 'slug'
+            ],
+            [
+                'class' => BlameableBehavior::className(),
+                'createdByAttribute' => 'created_user_id',
+                'updatedByAttribute' => 'updated_user_id',
+            ],
+        ];
+
     }
 }

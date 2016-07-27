@@ -3,7 +3,10 @@
 $this->title = 'Хирург';
 use yii\helpers\Html;
 use yii\helpers\Url;
-
+use himiklab\thumbnail\EasyThumbnailImage;
+$this->registerMetaTag(['name'=> 'title', 'content' => '']);
+$this->registerMetaTag(['name'=> 'keywords', 'content' => '']);
+$this->registerMetaTag(['name'=> 'description', 'content' => '']);
 ?>
 
 <div class = 'iosSlider'>
@@ -100,49 +103,49 @@ use yii\helpers\Url;
         <div class="chelovek_img">
             <div class="chel_img_pos"><img src="img/chel.png" alt="">
 
-                <a href="" class="chel_items suzhenie_sonnix_arterii" date-title="Сужение сонных артерии">
+                <a href="<?= Url::toRoute(['/article/aterokleroz-sonnih']) ?>" class="chel_items suzhenie_sonnix_arterii" date-title="Сужение сонных артерии">
                     <div class="chel_item">
                     </div>
                 </a>
-                <a href="" class="chel_items trombi" date-title="Тромбы (онемение, похолдание)">
+                <a href="<?= Url::toRoute(['/article/arteskleroz-sosudov']) ?>" class="chel_items trombi" date-title="Тромбы (онемение, похолдание)">
                     <div class="chel_item "></div>
                 </a>
-                <a href="" class="chel_items troficheskie_iazvi" date-title="Трофические язвы">
+                <a href="<?= Url::toRoute(['/article/aterokleroz-sonnih']) ?>" class="chel_items troficheskie_iazvi" date-title="Трофические язвы">
                     <div class="chel_item ">
                     </div>
                 </a>
-                <a href="" class="chel_items bol_v_oblasti_zhivota" date-title="Боль в области живота">
+                <a href="<?= Url::toRoute(['/article/arteskleroz-sosudov']) ?>" class="chel_items bol_v_oblasti_zhivota" date-title="Боль в области живота">
                     <div class="chel_item ">
                     </div>
                 </a>
-                <a href="" class="chel_items right trombi_right" date-title="Тромбы (онемение, похолдание)">
+                <a href="<?= Url::toRoute(['/article/arteskleroz-sosudov']) ?>" class="chel_items right trombi_right" date-title="Тромбы (онемение, похолдание)">
                     <div class="chel_item "></div>
                 </a>
-                <a href="" class="chel_items right troficheskie_iazvi_right" date-title="Трофические язвы">
+                <a href="<?= Url::toRoute(['/article/venozniye-yazvy']) ?>" class="chel_items right troficheskie_iazvi_right" date-title="Трофические язвы">
                     <div class="chel_item ">
                     </div>
                 </a>
-                <a href="" class="chel_items bol_onimenie_nizhnix_konechnosti " date-title="Боль, онемение нижних конечностей">
+                <a href="<?= Url::toRoute(['/article/arteskleroz-sosudov']) ?>" class="chel_items bol_onimenie_nizhnix_konechnosti " date-title="Боль, онемение нижних конечностей">
                     <div class="chel_item ">
                     </div>
                 </a>
-                 <a href="" class="chel_items bol_onimenie_nizhnix_konechnosti_right " date-title="Боль, онемение нижних конечностей">
+                 <a href="<?= Url::toRoute(['/article/arteskleroz-sosudov']) ?>" class="chel_items bol_onimenie_nizhnix_konechnosti_right " date-title="Боль, онемение нижних конечностей">
                     <div class="chel_item ">
                     </div>
                 </a>
-                <a href="" class="chel_items varikoz_tromboz_ven " date-title="Варикоз, тромбоз вен">
+                <a href="<?= Url::toRoute(['/article/varikozniye-rasshireniye-ven']) ?>" class="chel_items varikoz_tromboz_ven " date-title="Варикоз, тромбоз вен">
                     <div class="chel_item ">
                     </div>
                 </a>
-                <a href="" class="chel_items varikoz_tromboz_ven_right " date-title="Варикоз, тромбоз вен">
+                <a href="<?= Url::toRoute(['/article/varikozniye-rasshireniye-ven']) ?>" class="chel_items varikoz_tromboz_ven_right " date-title="Варикоз, тромбоз вен">
                     <div class="chel_item ">
                     </div>
                 </a>
-                <a href="" class="chel_items troficheskie_iazvi_nog " date-title="Трофические язвы">
+                <a href="<?= Url::toRoute(['/article/venozniye-yazvy']) ?>" class="chel_items troficheskie_iazvi_nog " date-title="Трофические язвы">
                     <div class="chel_item ">
                     </div>
                 </a>
-                <a href="" class="chel_items troficheskie_iazvi_nog_right " date-title="Трофические язвы">
+                <a href="<?= Url::toRoute(['/article/venozniye-yazvy']) ?>" class="chel_items troficheskie_iazvi_nog_right " date-title="Трофические язвы">
                     <div class="chel_item ">
                     </div>
                 </a>
@@ -158,44 +161,38 @@ use yii\helpers\Url;
                         <strong>Болезни вен</strong>
                         <div class="sub_title_container">
                             <ul class="sub_title">
-                              <li><a href="">Варикозное расширение вен</a></li>  
-                              <li><a href="">Тромбозы глубоких вен</a></li>
-                              <li><a href="">Тромбофлебит</a></li>
-                              <li><a href="">Хроническая венозная недостаточность</a></li>
+                              <li><a href="<?= Url::toRoute(['/article/varikozniye-rasshireniye-ven']) ?>">Варикозное расширение вен</a></li>
+                              <li><a href="<?= Url::toRoute(['/article/trombozi-glubokix-ven']) ?>">Тромбозы глубоких вен</a></li>
+                              <li><a href="<?= Url::toRoute(['/article/tromboflebit']) ?>">Тромбофлебит</a></li>
+                              <li><a href="<?= Url::toRoute(['/article/hronicheskaya-venoznaya']) ?>">Хроническая венозная недостаточность</a></li>
                             </ul>
                         </div>
                     </div>
-                    <p>Contrary to popular belief, Lorem Ipsum is not simply random text.
-                        It has roots in a piece of classical Latin literature from 45 BC,
-                        making it over 2000 years old.</p>
+                    <p><?= \common\models\Text::getValue('bolezny_ven');?></p>
                 </li>
                 <li>
                     <div class="stroenie_title">
                         <strong>Болезни артерий</strong>
                         <div class="sub_title_container">
                             <ul class="sub_title">
-                              <li><a href="">Атеросклероз</a></li>  
-                              <li><a href="">Эндоартериат</a></li>
+                              <li><a href="<?= Url::toRoute(['/article/arteskleroz-sosudov']) ?>">Атеросклероз</a></li>
+                              <li><a href="<?= Url::toRoute(['/article/anevrizma-bryushnoi-aorty']) ?>">Эндоартериат</a></li>
                             </ul>
                         </div>
                     </div>
-                    <p>Contrary to popular belief, Lorem Ipsum is not simply random text.
-                        It has roots in a piece of classical Latin literature from 45 BC,
-                        making it over 2000 years old.</p>
+                    <p><?= \common\models\Text::getValue('bolezny_arteriy');?></p>
                 </li>
                 <li>
                     <div class="stroenie_title">
                         <strong>Трофические язвы</strong>
                         <div class="sub_title_container">
                             <ul class="sub_title">
-                              <li><a href="">Венозные язвы</a></li>  
-                              <li><a href="">Артериальные язвы</a></li>
+                              <li><a href="<?= Url::toRoute(['/article/venozniye-yazvy']) ?>">Венозные язвы</a></li>
+                              <li><a href="<?= Url::toRoute(['/article/arterialniye-yazvy']) ?>">Артериальные язвы</a></li>
                             </ul>
                         </div>
                     </div>
-                    <p>Contrary to popular belief, Lorem Ipsum is not simply random text.
-                        It has roots in a piece of classical Latin literature from 45 BC,
-                        making it over 2000 years old.</p>
+                    <p><?= \common\models\Text::getValue('troficheskiye_yazvi');?></p>
                 </li>
             </ul>
         </div>
@@ -241,7 +238,7 @@ use yii\helpers\Url;
                 Вы здоровы!
             </li>
         </ul>
-        <a href="" class="button">
+        <a href="#pozvonim" class="button">
             Связаться с нами
         </a>
     </div>
@@ -251,54 +248,27 @@ use yii\helpers\Url;
         <h2>Сертификаты</h2>
     </div>
     <div class="sertificat_js">
-                        <div class="sertificat_list-item">
-                            <div class="sertificat_list">
-                                <div class="sertificat_list">
-                                    <a href="img/sertificat.jpg"class="fancybox"><img src="img/sertificat.jpg" alt="" ></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="sertificat_list-item">
-                            <div class="sertificat_list">
-                                <div class="sertificat_list">
-                                    <a href="img/sertificat.jpg"class="fancybox"><img src="img/sertificat.jpg" alt="" ></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="sertificat_list-item">
-                            <div class="sertificat_list">
-                                <div class="sertificat_list">
-                                    <a href="img/sertificat.jpg"class="fancybox"><img src="img/sertificat.jpg" alt="" ></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="sertificat_list-item">
-                            <div class="sertificat_list">
-                                <div class="sertificat_list">
-                                    <a href="img/sertificat.jpg"class="fancybox"><img src="img/sertificat.jpg" alt="" ></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="sertificat_list-item">
-                            <div class="sertificat_list">
-                                <div class="sertificat_list">
-                                    <a href="img/sertificat.jpg"class="fancybox"><img src="img/sertificat.jpg" alt="" ></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="sertificat_list-item">
-                            <div class="sertificat_list">
-                                <div class="sertificat_list">
-                                    <a href="img/sertificat.jpg"class="fancybox"><img src="img/sertificat.jpg" alt="" ></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="sertificat_list-item">
-                            <div class="sertificat_list">
-                                <div class="sertificat_list">
-                                    <a href="img/sertificat.jpg"class="fancybox"><img src="img/sertificat.jpg" alt="" ></a>
-                                </div>
-                            </div>
-                        </div>
+        <?php foreach($certificates as $certificate){?>
+            <div class="sertificat_list-item">
+                <div class="sertificat_list">
+                    <div class="sertificat_list">
+                        <a href="<?= $certificate->image ?>" class="fancybox">
+                        <?=
+                        EasyThumbnailImage::thumbnailImg(
+                            $certificate->imagePath,
+                            175,
+                            250,
+                            EasyThumbnailImage::THUMBNAIL_OUTBOUND,
+                            [
+                                'alt' => $certificate->title,
+                                'class' => ''
+                            ]
+                        );
+                        ?>
+                        </a>
                     </div>
+                </div>
+            </div>
+        <?php } ?>
+        </div>
 </div>

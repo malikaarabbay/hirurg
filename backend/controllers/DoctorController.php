@@ -8,7 +8,7 @@ use common\models\search\DoctorSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
-
+use vova07\fileapi\actions\UploadAction as FileAPIUpload;
 /**
  * DoctorController implements the CRUD actions for Doctor model.
  */
@@ -29,6 +29,16 @@ class DoctorController extends Controller
         ];
     }
 
+    public function actions()
+    {
+        return [
+            'fileapi-upload' => [
+                'class' => FileAPIUpload::className(),
+                'path' => '@frontend/web/images/',
+                'unique' => true,
+            ]
+        ];
+    }
     /**
      * Lists all Doctor models.
      * @return mixed
