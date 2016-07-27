@@ -27,8 +27,8 @@ use yii\helpers\Url;
                 <a href="/">
                     <img src="/img/logo.png" alt="">
                 </a>
-                Центр сосудистой и<br>
-                эндоваскулярной хирургии
+                <span>Центр сосудистой и<br>
+                эндоваскулярной хирургии</span>
             </div>
             <div class="consultacia">
                 <span>Консультация и запись на прием</span>
@@ -42,7 +42,7 @@ use yii\helpers\Url;
             </div>
         </div>
     </div>
-    <nav>
+    <nav class="nav">
         <div class="cr">
             <ul class="menu">
                 <li>
@@ -76,6 +76,7 @@ use yii\helpers\Url;
                 <li><a href="<?= Url::toRoute(['/article/o-klinike']) ?>">О клинике</a></li>
                 <li><a href="<?= Url::toRoute(['/article/contacts']) ?>">Контакты </a></li>
             </ul>
+            <div class="mob_start"></div>
         </div>
     </nav>
 </header>

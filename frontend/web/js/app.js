@@ -21,17 +21,19 @@ jQuery(document).ready(function ($) {
             breakpoint: 960,
             settings: {
                 slidesToShow: 3,
-            },
-             breakpoint: 758,
+            }},
+            {
+            breakpoint: 690,
             settings: {
                 slidesToShow: 2,
-            },
-             breakpoint: 360,
+            }},
+             {
+             breakpoint: 430,
             settings: {
                 slidesToShow: 1,
-            }
+            }}
 
-        }
+        
         ]
 
     });
@@ -42,6 +44,48 @@ $(document).ready(function() {
         openEffect  : 'none',
         closeEffect : 'none'
     });
+
+
+    //menu
+   var menu = document.querySelector(".mob_start");
+    var mob_part = document.querySelector(".menu");
+    var close = document.querySelector(".mob_close");
+    var m_sub = document.querySelector(".m_sub");
+  
+
+     $('.mob_start').click(function(e) {
+    var $mob_part = $('.menu');
+    if ($mob_part.css('display') != 'block') {
+        $mob_part.animate({height: "show"}  ,"1000");}
+    else{
+         $mob_part.animate({height: "hide"},  "1000");
+    
+    };
+     });
+     $('.sub_menu_link').on('click', function(){
+        if(($(this)).children('.sub_menu').hasClass('sub_show')){
+        $(this).siblings().children('.sub_menu').removeClass('sub_show');    
+        $(this).siblings().children('.sub_menu').animate({height: "hide"},  "800");
+            
+        }else{
+            $(this).children('.sub_menu').addClass('sub_show');
+             $(this).children('.sub_menu').animate({height: "show"}  ,"800")
+            
+        }
+        if($(this).siblings().children('.sub_menu').hasClass('sub_show')){
+            $(this).siblings().children('.sub_menu').removeClass('sub_show');
+              $(this).siblings().children('.sub_menu').animate({height: "hide"},  "800");
+        }
+    });
+     jQuery(function($){
+    $(document).mouseup(function (e){ // событие клика по веб-документу
+        var div = $(".menu "); // тут указываем ID элемента
+        if (!div.is(e.target) // если клик был не по нашему блоку
+            && div.has(e.target).length === 0) { // и не по его дочерним элементам
+            $('.menu').animate({height: "hide"},  "800"); // скрываем его
+        }
+    });
+});
 });
 $(document).ready(function() {
     function t(t) {
@@ -84,3 +128,22 @@ $(document).ready(function() {
         onSliderLoaded: n
     })
 });
+$(document).ready(function() {
+ $('.price_name ').on('click', function () {
+        if($(this).hasClass('active')){
+
+            $(this).removeClass('active');
+            
+            $(this).children('.price_content').animate({height: "hide"}, "800");
+        }else{
+            $('.price_name').removeClass('active');
+            $('.price_name').children('.price_content').animate({height: "hide"}, "easein");
+            $(this).addClass('active');
+            $(this).children('.price_content').animate({height: "show"}, "easein");
+            
+    
+        }
+        
+        
+    });
+  });

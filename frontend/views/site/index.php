@@ -34,7 +34,6 @@ use yii\helpers\Url;
 </div>
 <div class="border-line">
     <div class="xirurg">
-        <img src="img/xirurg.png" alt="">
     </div>
 </div>
 <div class="cr">
@@ -151,8 +150,7 @@ use yii\helpers\Url;
         </div>
         <div class="text_chel">
             <div class="title_text_chel">
-                Строение и работа сердечно-сосудистой<br>
-                системы человека
+    Сосудистая система человека
             </div>
             <ul class="storenie_list">
                 <li>

@@ -19,8 +19,9 @@ class AppAsset extends AssetBundle
     public $baseUrl = '@web';
     public $css = [
         'css/normalize.css',
-        'css/style.css',
         'css/slide.css',
+        'css/style.css',
+        
         'css/jquery.fancybox.css',
     ];
     public $js = [
