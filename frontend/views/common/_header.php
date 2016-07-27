@@ -13,7 +13,8 @@ use yii\helpers\Url;
                     <?= \common\models\Text::getValue('address');?>
                 </div>
                 <div class="top_container_item phones">
-                    <a href="tel:<?= \common\models\Text::getValue('first_phone');?>"><?= \common\models\Text::getValue('first_phone');?></a>,   <a href="tel:<?= \common\models\Text::getValue('second_phone');?>"> <?= \common\models\Text::getValue('second_phone');?></a>
+                <div class="mob_phone_menu"></div>
+                    <div class="mob_phone"><a href="tel:<?= \common\models\Text::getValue('first_phone');?>"><?= \common\models\Text::getValue('first_phone');?>, </a>  <a href="tel:<?= \common\models\Text::getValue('second_phone');?>"> <?= \common\models\Text::getValue('second_phone');?></a></div>
                 </div>
                 <div class="top_container_item mail">
                     <a href="mailto:<?= \common\models\Text::getValue('email');?>"><?= \common\models\Text::getValue('email');?></a>

@@ -45,47 +45,74 @@ $(document).ready(function() {
         closeEffect : 'none'
     });
 
-
-    //menu
-   var menu = document.querySelector(".mob_start");
-    var mob_part = document.querySelector(".menu");
-    var close = document.querySelector(".mob_close");
-    var m_sub = document.querySelector(".m_sub");
+////////////////////////////////////////////////////////////////////////////////////////////////    //menu
+  
   
 
      $('.mob_start').click(function(e) {
     var $mob_part = $('.menu');
     if ($mob_part.css('display') != 'block') {
-        $mob_part.animate({height: "show"}  ,"1000");}
+        $mob_part.animate({height: "show"}  ,"1000");
+         $mob_part.addClass('m_menu');}
     else{
          $mob_part.animate({height: "hide"},  "1000");
-    
+         $mob_part.removeClass('m_menu');
     };
      });
-     $('.sub_menu_link').on('click', function(){
+
+
+      $('.sub_menu_link').on('click', function(){
         if(($(this)).children('.sub_menu').hasClass('sub_show')){
         $(this).siblings().children('.sub_menu').removeClass('sub_show');    
-        $(this).siblings().children('.sub_menu').animate({height: "hide"},  "800");
+        $(this).siblings().children('.sub_menu').animate({height: "hide"},  "1000");
             
         }else{
             $(this).children('.sub_menu').addClass('sub_show');
-             $(this).children('.sub_menu').animate({height: "show"}  ,"800")
+             $(this).children('.sub_menu').animate({height: "show"}  ,"1000")
             
         }
         if($(this).siblings().children('.sub_menu').hasClass('sub_show')){
             $(this).siblings().children('.sub_menu').removeClass('sub_show');
-              $(this).siblings().children('.sub_menu').animate({height: "hide"},  "800");
+              $(this).siblings().children('.sub_menu').animate({height: "hide"},  "1000");
         }
     });
-     jQuery(function($){
+
     $(document).mouseup(function (e){ // событие клика по веб-документу
-        var div = $(".menu "); // тут указываем ID элемента
+        var div = $(".m_menu "); // тут указываем ID элемента
         if (!div.is(e.target) // если клик был не по нашему блоку
             && div.has(e.target).length === 0) { // и не по его дочерним элементам
-            $('.menu').animate({height: "hide"},  "800"); // скрываем его
+            $('.m_menu').animate({height: "hide"},  "1000"); // скрываем его
         }
     });
-});
+////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+$(document).ready(function() {
+
+         $('.mob_phone_menu').click(function(e) {
+                var $mob_parts = $('.mob_phone');
+                if ($mob_parts.css('display') != 'block') {
+                    $mob_parts.animate({height: "show"}  ,"1000");
+                    }
+                else{
+                     $mob_parts.animate({height: "hide"},  "1000");
+                     ;
+                }
+             });
+ 
+                     
+          });   
+  
+
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+    
+
+
 });
 $(document).ready(function() {
     function t(t) {
@@ -134,12 +161,12 @@ $(document).ready(function() {
 
             $(this).removeClass('active');
             
-            $(this).children('.price_content').animate({height: "hide"}, "800");
+            $(this).children('.price_content').animate({height: "hide"}, "1000");
         }else{
             $('.price_name').removeClass('active');
-            $('.price_name').children('.price_content').animate({height: "hide"}, "easein");
+            $('.price_name').children('.price_content').animate({height: "hide"}, "1000");
             $(this).addClass('active');
-            $(this).children('.price_content').animate({height: "show"}, "easein");
+            $(this).children('.price_content').animate({height: "show"}, "1000");
             
     
         }
